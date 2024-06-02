@@ -1,0 +1,30 @@
+<div *ngIf="image" class="container">
+  <div>
+    <img style="width: 100%; height: 100%;" src="{{image.download_url}}" alt="" class="rounded">
+  </div>
+
+  <div class="actions">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Mostrar detalle
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p><strong>Id.: </strong>{{ image.id }}</p>
+        <p><strong>Autor: </strong>{{ image.author }}</p>
+        <p><strong>Tamaño: </strong>{{ image.width }}x{{image.height}}</p>
+        <p><strong>Url: </strong>{{ image.url }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <button mat-fab extended color="accent" routerLink="/">
+      <mat-icon>arrow_back</mat-icon>
+      Volver
+    </button>
+  </div>
+</div>
+
+
+

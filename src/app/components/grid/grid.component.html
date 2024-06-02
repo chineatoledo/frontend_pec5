@@ -1,0 +1,7 @@
+<mat-list>
+  <div mat-subheader><h1>Lista de imágenes</h1></div>
+    <mat-list-item *ngFor="let image of images">
+      <mat-icon matListItemIcon>photo</mat-icon>
+      <div matListItemTitle>{{ image.id }} | {{ image.author }} link: <a [routerLink]="['/detail', image.id]">{{ image.url }}</a></div>
+    </mat-list-item>
+</mat-list>

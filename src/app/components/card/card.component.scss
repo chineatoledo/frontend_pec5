@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+mat-card {
+  max-width: 590px;
+  padding: 1rem;
+}
+
+mat-card-header {
+  padding: 0;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  border-radius: 3px;
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 1000px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

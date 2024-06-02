@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="button-display">
+    <button mat-fab extended color="primary" (click)="listScreen()">
+      <mat-icon>list</mat-icon>
+      Lista
+    </button>
+    <button mat-fab extended color="accent" (click)="moduleScreen()">
+      <mat-icon>view_module</mat-icon>
+      Módulo
+    </button>
+  </div>
+
+  <div class="content">
+    <div *ngIf="screen">
+      <app-grid [images]="images"></app-grid>
+    </div>
+    <div *ngIf="!screen">
+      <app-card [images]="images"></app-card>
+    </div>   
+  </div>
+</div>
+

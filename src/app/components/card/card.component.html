@@ -1,0 +1,17 @@
+
+<div class="container">
+  <h1>Imágenes</h1>
+  <div class="card-container">
+    <div *ngFor="let image of images">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{ image.id }} | {{ image.author }}</mat-card-title>
+            <mat-card-subtitle>{{ image.width }} x {{ image.height }}</mat-card-subtitle>
+            <a [routerLink]="['/detail', image.id]"><img mat-card-sm-image src="{{ image.download_url }}" ></a>
+          </mat-card-title-group>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+</div>
