@@ -6,6 +6,15 @@
   padding: 2rem 0rem;
 }
 
+.spinner {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
 .button-display {
   display: flex;
   justify-content: end;

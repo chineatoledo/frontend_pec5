@@ -10,7 +10,10 @@
     </button>
   </div>
 
-  <div class="content">
+  <div *ngIf="loading" class="spinner">
+    <app-spinner></app-spinner>
+  </div>
+  <div @fallIn class="content">
     <div *ngIf="screen">
       <app-grid [images]="images"></app-grid>
     </div>
